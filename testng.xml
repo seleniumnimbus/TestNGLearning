@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation suite">
+	<test verbose="2" name="SBI test">
+		<classes>
+			<class name="SBI.WDSBI" />
+			<class name="SBI.LoanSBI" />
+			<class name="SBI.AllocationSBI">
+				<methods>
+					<include name="allocation1SBI" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="Yes Bank test">
+		<classes>
+			<class name="YesBank.WDYesBank" />
+			<class name="YesBank.LoanYesBank" />
+			<class name="YesBank.AllocationYesBank" />
+		</classes>
+	</test>
+</suite>
