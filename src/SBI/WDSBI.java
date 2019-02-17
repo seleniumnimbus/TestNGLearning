@@ -4,6 +4,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Base.BaseSBITest;
@@ -11,8 +12,11 @@ import Base.BaseSBITest;
 public class WDSBI extends BaseSBITest{
 	
 	@BeforeClass(alwaysRun=true)
-	public void loginSBI() {
+	@Parameters({"userName","password"})
+	public void loginSBI(String userName,String password) {
 		System.out.println("Login to SBI");
+		System.out.println("User Name is " + userName);
+		System.out.println("Password is " + password);
 	}
 	
 	@AfterClass(alwaysRun=true)

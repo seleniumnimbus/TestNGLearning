@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation suite">
+	<parameter name="userName" value="User1"/>
+	<parameter name="password" value="Password1"/>
+	<test verbose="2" name="SBI test">
+		<classes>
+			<class name="SBI.WDSBI" />
+		</classes>
+	</test>
+</suite>
